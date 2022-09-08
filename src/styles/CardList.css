@@ -1,0 +1,40 @@
+
+.container{
+  
+    width: 980px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    gap:1rem;
+    margin: auto;
+   
+}
+.cards{
+    background-color:#9EEBCF;
+    width: 230px;
+    height: 300px;
+    border-radius: 10px;
+    cursor: pointer;
+     margin-top: 15px;
+
+}
+.cards:hover {
+    background-color: #FFA300;
+    transform: scale(1.1);
+}
+.title-name{
+    font-family: sans-serif;
+    font-weight: 900;
+    font-size: 16px;
+}
+.style-email{
+    margin-top: -20px;
+    font-size: 12px;
+}
+.style-image{
+    width: 80%;
+    height: 75%;
+ 
+    object-fit: contain;
+}
