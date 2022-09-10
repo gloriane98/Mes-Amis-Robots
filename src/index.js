@@ -2,12 +2,23 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import '../src/styles/index.css';
 import App from './components/App';
+/* import Home from "../src/components/Home" */
 import reportWebVitals from './reportWebVitals';
+import {BrowserRouter} from "react-router-dom";
+import {Routes, Route} from 'react-router-dom';
+import DetailRobot from '../src/components/DetailRobot';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+      <BrowserRouter>
+      <Routes>
+        <Route path='/' element= {<App/>} />
+       <Route path='robot/:id' element= {<DetailRobot/>} /> 
+       
+      </Routes>  
+    </BrowserRouter> 
+    {/*   <App />  */}
   </React.StrictMode>
 );
 

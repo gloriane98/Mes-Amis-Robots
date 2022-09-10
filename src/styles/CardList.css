@@ -16,7 +16,7 @@
     height: 300px;
     border-radius: 10px;
     cursor: pointer;
-     margin-top: 15px;
+    margin-top: 30px;
 
 }
 .cards:hover {
@@ -35,6 +35,5 @@
 .style-image{
     width: 80%;
     height: 75%;
- 
     object-fit: contain;
 }
