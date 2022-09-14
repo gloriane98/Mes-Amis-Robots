@@ -2,6 +2,7 @@ import React from 'react';
 import { useEffect, useState } from "react";
 import {useParams} from 'react-router-dom';
 import Loader from './Loader';
+import "../styles/DetailRobot.css"
 
 
 function DetailRobot () {
@@ -24,7 +25,7 @@ function DetailRobot () {
         })
      }
    
-      
+      console.log(robot);
     
     useEffect(() => {
         TourneRobots()
@@ -47,9 +48,13 @@ function DetailRobot () {
 
             <div className="card-bot">
                 <img src={`https://robohash.org/${robot.id}`} alt={robot.name} className="robot-id"/>
-                <p className='paraph1'> {robot.name} </p>
-                <p className='paraph'> {robot.email} </p>
-                <p className='paraph'> {robot.phone} </p>
+                <div className='text-robot'>
+                  <p className='paraph1'> {robot.name} </p>
+                  <p className='paraph'> {robot.email} </p>
+                  <p className='paraph'> {robot.phone} </p>
+                  <p className='paraph'> {robot.address.city} </p>
+                </div>
+            
             </div>: <Loader/>
                 }
         </div>

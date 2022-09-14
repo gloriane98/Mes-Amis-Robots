@@ -1,7 +1,7 @@
 
 .container{
   
-    width: 980px;
+    width: 970px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -37,3 +37,17 @@
     height: 75%;
     object-fit: contain;
 }
+@media (max-width: 930px) {
+    .container{
+        width: 600px;
+      
+      
+    }
+    .style-email{
+       
+        font-size: 15px;
+    }
+    .title-name{
+        font-size: 17px;
+    }
+    }

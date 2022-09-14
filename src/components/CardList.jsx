@@ -25,7 +25,7 @@ function CardList(){
             setLoading(false)
           })
       }
-    
+
       useEffect(() => {
         fecthRobots()
       }, [])
