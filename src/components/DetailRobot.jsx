@@ -3,16 +3,20 @@ import { useEffect, useState } from "react";
 import {useParams} from 'react-router-dom';
 import Loader from './Loader';
 import "../styles/DetailRobot.css"
-
+import { useNavigate } from 'react-router-dom';
 
 function DetailRobot () {
      const [robot, setRobot] = useState({});
      const [loading, setLoading] = useState(true);
-           
+    const Navigate = useNavigate();  
      let {id} = useParams();
        
 
-     const TourneRobots = () =>{
+     
+   
+    
+    useEffect(() => {
+      const TourneRobots = () =>{
         fetch(`https://jsonplaceholder.typicode.com/users/${id}`)
         .then(response => {
           return response.json()
@@ -23,13 +27,9 @@ function DetailRobot () {
           setLoading(false)
 
         })
-     }
-   
-      console.log(robot);
-    
-    useEffect(() => {
-        TourneRobots()
-      }, [])
+      }
+      TourneRobots();
+      }, [id])
    
     
         if(!robot){
@@ -41,12 +41,20 @@ function DetailRobot () {
         
             
             return(
+              <>
+            
                     
             <div className='details-bot'>
+            <div className='btn-return'>
+            <button onClick={()=>{Navigate("/")}}>
+              retour
+              </button>
+            </div>
                 {
                     !loading?
 
             <div className="card-bot">
+            
                 <img src={`https://robohash.org/${robot.id}`} alt={robot.name} className="robot-id"/>
                 <div className='text-robot'>
                   <p className='paraph1'> {robot.name} </p>
@@ -58,6 +66,7 @@ function DetailRobot () {
             </div>: <Loader/>
                 }
         </div>
+        </>
         ) 
            
            

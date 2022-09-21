@@ -1,23 +1,22 @@
-
-.container{
-  
-    width: 970px;
+.container {
+   
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     text-align: center;
+    width: 95%;
     gap:1rem;
-    margin: auto;
-   
+    padding-left: 40px;
+
+    
 }
 .cards{
-    background-color:#9EEBCF;
-    width: 230px;
-    height: 300px;
-    border-radius: 10px;
+    background-color: #9EEBCF;
+    width: 21%;
+    height:300px;
+    border-radius: 5px;
     cursor: pointer;
     margin-top: 30px;
-
 }
 .cards:hover {
     background-color: #FFA300;
@@ -27,6 +26,7 @@
     font-family: sans-serif;
     font-weight: 900;
     font-size: 16px;
+ 
 }
 .style-email{
     margin-top: -20px;
@@ -39,15 +39,9 @@
 }
 @media (max-width: 930px) {
     .container{
-        width: 600px;
+        width: 48%;
       
       
     }
-    .style-email{
-       
-        font-size: 15px;
-    }
-    .title-name{
-        font-size: 17px;
-    }
+   
     }
